@@ -6,6 +6,7 @@
 
 ### 技术栈
 
+- Bun（运行时 + 包管理器，`bun install` / `bun run`，锁定 `bun@1.3.14`）
 - Nuxt 4（应用框架，`nuxt.config.ts` 中 `ssr: false`）
 - Vue 3（Composition API）
 - TypeScript
@@ -16,10 +17,10 @@
 
 ### 构建与命令
 
-- 开发：`pnpm dev`
-- 构建：`pnpm build`
-- 预览：`pnpm preview`
-- 类型检查：`pnpm exec vue-tsc --noEmit`
+- 开发：`bun dev`
+- 构建：`bun build`
+- 预览：`bun preview`
+- 类型检查：`bunx vue-tsc --noEmit`
 - 无 lint 脚本（eslint 未安装；如需静态检查需自行安装并配置）
 
 ### 代码组织
@@ -60,8 +61,8 @@ utac-2/
 
 ### 测试策略
 
-- 类型安全：`pnpm exec vue-tsc --noEmit`
-- 功能验证：`pnpm build` 通过后 `node .output/server/index.mjs` 启动预览，`curl` 检查 `/`、`/about`、任意路径（404）均返回 200
+- 类型安全：`bunx vue-tsc --noEmit`
+- 功能验证：`bun build` 通过后 `bun .output/server/index.mjs` 启动预览，`curl` 检查 `/`、`/about`、任意路径（404）均返回 200
 - 无自动化测试框架，改动后以上述命令人工验证
 
 ### 安全考虑

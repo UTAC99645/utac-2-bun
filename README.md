@@ -18,6 +18,7 @@
 
 ## 技术栈
 
+- [Bun](https://bun.sh/) — 运行时 + 包管理器（`bun install` / `bun run`）
 - [Nuxt 4](https://nuxt.com/) — 应用框架（`ssr: false`，纯 SPA 模式）
 - [Vue 3](https://vuejs.org/) — Composition API
 - [TypeScript](https://www.typescriptlang.org/) — 类型安全
@@ -55,26 +56,26 @@ utac-2/
 │   └── assets/
 │       └── img/               # 图片资源（加载动效、404 背景等）
 ├── package.json
-├── pnpm-lock.yaml
+├── bun.lock
 └── tsconfig.json              # 继承 .nuxt/tsconfig.json
 ```
 
 ## 快速开始
 
-**环境要求**：Node.js >= 20，包管理器 pnpm
+**环境要求**：Bun >= 1.3（本仓库锁定 `bun@1.3.14`）
 
 ```bash
 # 安装依赖
-pnpm install
+bun install
 
 # 开发模式
-pnpm dev
+bun dev
 
 # 构建生产版本
-pnpm build
+bun build
 
-# 预览构建结果
-pnpm preview
+# 预览构建结果（使用 Bun 运行时）
+bun preview
 ```
 
 ## 路由与 URL 参数
